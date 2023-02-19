@@ -54,36 +54,36 @@ public final class Main {
         ExceptionHandler.registerErrorHandling();
 
         // Start splash screen first, then data models, then controller.
-        if (args.length == 0) {
+//        if (args.length == 0) {
             Singletons.initializeOnce(true);
 
             // Controller can now step in and take over.
             Singletons.getControl().initialize();
             return;
-        }
+//        }
 
         // command line startup here
-        String mode = args[0].toLowerCase();
+//        String mode = args[0].toLowerCase();
+//
+//        switch(mode) {
+//            case "sim":
+//                SimulateMatch.simulate(args);
+//                break;
+//
+//            case "parse":
+//            	CardReaderExperiments.parseAllCards(args);
+//                break;
+//
+//            case "server":
+//                System.out.println("Dedicated server mode.\nNot implemented.");
+//                break;
+//
+//            default:
+//                System.out.println("Unknown mode.\nKnown mode is 'sim', 'parse' ");
+//                break;
+//        }
         
-        switch(mode) {
-            case "sim":
-                SimulateMatch.simulate(args);
-                break;
-
-            case "parse":
-            	CardReaderExperiments.parseAllCards(args);
-                break;
-
-            case "server":
-                System.out.println("Dedicated server mode.\nNot implemented.");
-                break;
-            
-            default:
-                System.out.println("Unknown mode.\nKnown mode is 'sim', 'parse' ");
-                break;
-        }
-        
-        System.exit(0);
+//        System.exit(0);
     }
 
     @SuppressWarnings("deprecation")
